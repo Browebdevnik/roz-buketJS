@@ -1,0 +1,712 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+body {
+	background-color: #FFFAFA;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+}
+
+.line {
+	width: 50%;
+	border-top: 2px dotted rgba(0, 0, 0, 0.32);
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+	margin-bottom: 10px; 
+}
+
+.line-title {
+	width: 50%;
+  height: 3px;
+  background-color: rgb(230, 220, 220);
+	border-radius: 0px;
+	margin-bottom: 10px;
+}
+
+/* Верхнее меню навигации + Корзина */
+.width {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+.width1100 {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.navigation {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 100;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navigation-box {
+	display: flex;
+	width: 100%;
+	padding-bottom: 30px;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Comfortaa', cursive;
+	padding-top: 20px;
+	text-align: center;
+	z-index: 100;
+
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo__img {
+	height: 80px;
+	width: 80px;
+	background-position: left center;
+	background-size: contain;
+	background-image: url(../img/navigation/logo.png);
+	background-repeat: no-repeat;
+}
+
+.logo__title {
+	text-align: left;
+	padding-left: 20px;
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+.transition {
+	display: flex;
+}
+
+.transition__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	margin: 10px;
+	width: 215px;
+	height: 40px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.transition__link:hover {
+	background-color: rgba(68, 68, 68, 0.103);
+}
+
+.number-basket__number {
+	font-size: 28px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.number-basket__basket {
+	width: 240px;
+	height: 45px;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: rgb(229, 6, 93);
+	border-color: rgb(183, 5, 74);
+	box-shadow: 0px 2px 10px 4px rgba(0, 0, 0, 0.25);
+	color: rgb(255, 255, 255);
+}
+
+.number-basket__basket:hover {
+	background-color: rgb(179, 6, 72);
+}
+
+.popup-form__btn:hover {
+	background-color: rgb(179, 6, 72);
+}
+
+.contacts__btn:hover {
+	background-color: rgb(179, 6, 72);
+}
+
+/* Конец верхнего меню навигации + Корзины */
+
+
+/* Секция с главным фоном */
+.main-bacground {
+	position: relative;
+	background-image: url(../img/main-bacground.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 600px;
+	z-index: 2;
+}
+
+.main-bacground::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 0;
+	background-size: cover;
+}
+
+.main-bacground__title {
+	position: relative;
+	padding-top: 250px;
+	max-width: 1100px;
+}
+
+.main-bacground__title h1 {
+	color: #FFFAFA;
+	font-size: 56px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.main-bacground__title span {
+	color: #FFFAFA;
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+}
+
+/* Конец Секции с главным фоном */
+
+
+.selling-title {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	display: flex;
+	justify-content: center;
+}
+
+.selling-title span {
+	color: rgb(0, 0, 0);
+	font-size: 56px;
+	font-family: 'Comfortaa', cursive;
+}
+
+/* Блок с преймуществами магазина */
+
+.advantages-box {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 125px;
+}
+
+.advantages-box__element {
+	width: 32.5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Comfortaa', cursive;
+	background-color: #ffffff;
+	padding: 5px;
+	color: #333;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(230, 220, 220);
+  box-shadow: 1px 2px 17px -3px rgba(201, 201, 201, 0.94);
+}
+
+.advantages-box__element img{
+	width: 93px;
+	height: 93px;
+}
+
+.advantages-box__element h2 {
+	margin-top: 15px;
+	font-size: 24px;
+}
+
+.advantages-box__element p {
+	font-size: 18px;
+	text-align: center;
+}
+
+.advantages-box__element span {
+	font-weight: bold;
+}
+
+/* Конец Блока с преймуществами магазина */
+.product {
+	margin-top: 40px;
+	background-color: #FFFAFA;
+}
+.box-product {
+	background-color: #ffffff;
+}
+
+.product__title {
+	padding-top: 86px;
+  padding-bottom: 60px;
+}
+
+.product__title h2 {
+	font-size: 56px;
+}
+
+.product__title p {
+	font-size: 24px;
+}
+
+/* Букет */
+
+.bouquet {
+	background-color: #FFFAFA;
+}
+.bouquet-block {
+	margin-top: 60px;
+	background-color: rgb(255, 255, 255);
+  color: #333;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(230, 220, 220);
+	box-shadow: 1px 2px 17px -3px rgba(201, 201, 201, 0.94);
+}
+
+.bouquet-content {
+	display: flex;
+}
+/* Раздел с титульными картинками товара */
+.bouquet-img {
+	height: 220px;
+	width: 24%;
+	background-image: url(../img/product/bouquet-of-roses/rouse-title.jpg);
+	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-left: 1px;
+	margin-top: 1px;
+}
+.bouquet-img2 {
+	background-image: url(../img/product/bouquet-gigant/gigant-title.jpg);
+}
+
+.bouquet-img3 {
+	background-image: url(../img/product/bouquet-boxes/boxes-title.jpg);
+}
+
+.bouquet-img4 {
+	background-image: url(../img/product/bouquet-boxes-sweets/boxses-title.jpg);
+}
+
+.bouquet-img5 {
+	background-image: url(../img/product/bouquet-wedding/wedding-title.jpg);
+}
+
+.bouquet-img6 {
+	background-image: url(../img/product/bouquet-gerlfriend/gerlfriend-title.jpg);
+}
+
+.bouquet-img7 {
+	background-image: url(../img/product/bouquet-mother/mother-title.jpg);
+}
+
+.bouquet-img8 {
+	background-image: url(../img/product/bouquet-dating/dating-title.jpg);
+}
+
+.bouquet-img9 {
+	background-image: url(../img/product/ballons/ballons-title.jpg);
+}
+
+.bouquet-img10 {
+	background-image: url(../img/product/wedding-decoration/wedding-title.jpg);
+}
+
+.bouquet-img11 {
+	background-image: url(../img/product/bouquet-photo-zone/photozone-title.jpg);
+}
+
+.bouquet-img12 {
+	background-image: url(../img/product/delivery/develary-title.jpg);
+}
+
+/* Конец Раздела с титульными картинками товара */
+
+
+.bouquet-text h3 {
+	padding-top: 10px;
+	font-size: 28px;
+}
+
+.bouquet-text p {
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+.line-bouquet {
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.spoiler {
+	background-color: rgb(255, 255, 255);
+	color: #333;
+}
+
+.open-spoiler {
+	margin-top: 20px;
+	padding-left: 25px;
+	font-size: 26px;
+	color: black;
+}
+
+/* Конец Букета */
+
+.upertitle {
+	padding-top: 60px;
+	font-size: 40px;
+	text-align: center;
+}
+
+/* Форма обратной связи */
+
+.bouquet-block__form-text .line {
+	width: 30%;
+}
+
+.bouquet-form {
+	display: flex;
+}
+
+.bouquet-block__form-text {
+	width: 60%;
+	text-align: center;
+}
+
+.bouquet-block__form {
+	display: flex;
+	align-items: flex-end;
+	width: 40%;
+	margin-left: 10%;
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
+
+.popup-form-header {
+	display: flex;
+	flex-direction: column;
+	width: 120%;
+}
+
+.popup-form-header p{
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.popup-form__input {
+	display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	margin-bottom: 10px;
+}
+
+.popup-form__btn {
+	background-color: rgb(229, 6, 93);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 3px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-color: rgb(183, 5, 74);
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	font-family: "Roboto Slab";
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.popup-form__note {
+	margin-top: 15px;
+	padding-left: 20px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.bouquet-block__form-text h3 {
+	font-size: 32px;
+	line-height: 1.4;
+	color: black;
+}
+
+.bouquet-block__form-text p {
+	font-size: 22px;
+	text-align: center;
+	line-height: 1.4;
+	color: black;
+}
+
+/*  Слайдер  */
+.sl {
+	margin-top: 100px;
+}
+
+.sl_slide img{
+	margin: 0 auto;
+}
+
+/* Конец  Слайдера  */
+
+/* Секция с контактами  */
+.contacts {
+	display: flex;
+	margin-top: 50px;
+	background-color: rgb(255, 255, 255);
+  color: #333;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(230, 220, 220);
+	box-shadow: 1px 2px 17px -3px rgba(201, 201, 201, 0.94);
+	padding: 5px;
+	margin-bottom: 60px;
+}
+
+
+.contacts-title {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.contacts-text {
+	font-size: 20px;
+}
+
+.address,
+.work-time,
+.vk,
+.insta,
+.telephone_number,
+.whatsApp,
+.viber
+{
+	padding-bottom: 30px;
+}
+
+.vk, .insta, .whatsApp,
+.viber {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 15px;
+}
+
+
+.contacts__btn {
+	background-color: rgb(229, 6, 93);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 3px;
+	border-left-width: 2px;
+	border-right-width: 2px;
+	border-color: rgb(183, 5, 74);
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	font-size: 19px;
+	color: rgb(255, 255, 255);
+}
+
+.contacts__map {
+	padding-left: 70px;
+}
+/* Секция с контактами конец */
+
+footer {
+	width: 100%;
+	background-color: rgb(56, 56, 56);
+	color: #FFF;
+	font-size: 40px;
+	padding: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Секция с товаром */
+.spoiler {
+
+}
+.goods {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 5px; 
+	padding-top: 20px;
+}
+
+.goods__box {
+	display: block;
+	width: 335px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+  color: #333;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(230, 220, 220);
+	box-shadow: 1px 2px 17px -3px rgba(201, 201, 201, 0.94);
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border-radius: 3px;
+}
+
+.goods__box p{
+	font-size: 24px;
+	font-family: "Roboto Slab";
+	font-weight: 600;
+	background-color: initial;
+	text-align: inherit;
+}
+
+.goods__img {
+	padding-top: 5px;
+	padding-bottom: 5px;  	
+}
+
+.goods__description {
+	background-color: initial;
+  text-align: inherit;
+	font-size: 20px;
+	font-family: "Roboto Slab";
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;  
+}
+
+.goods__price {
+	background-color: initial;
+  text-align: inherit;
+	font-size: 22px;
+	font-family: "Roboto Slab";
+	font-weight: 500;
+	padding-top: 10px;
+	padding-bottom: 10px;  
+}
+
+.twogoods {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 5px; 
+	padding-top: 20px;
+}
+
+.twogoods__box {
+	display: block;
+	width: 335px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+  color: #333;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(230, 220, 220);
+	box-shadow: 1px 2px 17px -3px rgba(201, 201, 201, 0.94);
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	border-radius: 3px;
+}
+
+.twogoods__box p{
+	font-size: 24px;
+	font-family: "Roboto Slab";
+	font-weight: 600;
+	background-color: initial;
+	text-align: inherit;
+}
+
+.twogoods__img {
+	padding-top: 5px;
+	padding-bottom: 5px;  	
+}
+
+.twogoods__description {
+	background-color: initial;
+  text-align: inherit;
+	font-size: 20px;
+	font-family: "Roboto Slab";
+	font-weight: 500;
+	padding-top: 5px;
+	padding-bottom: 5px;  
+}
+
+.twogoods__price {
+	background-color: initial;
+  text-align: inherit;
+	font-size: 22px;
+	font-family: "Roboto Slab";
+	font-weight: 500;
+	padding-top: 10px;
+	padding-bottom: 10px;  
+}
